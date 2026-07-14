@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Road Trip Californie — 23 juil – 15 août 2026</title>
+<title>Road Trip Californie — 23 juil – 16 août 2026</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,10 +36,10 @@
 <div id="home-page">
   <div class="hero">
     <h1>🌴 Road Trip Californie 2026</h1>
-    <p>23 juillet – 15 août &nbsp;·&nbsp; SF → Yosemite West → Kings Canyon → Sequoia → Death Valley → Las Vegas → Grand Canyon → Joshua Tree → Palm Springs → Los Angeles → Santa Barbara → Cambria → Monterey → Silicon Valley → SFO</p>
+    <p>23 juillet – 16 août &nbsp;·&nbsp; SF → Yosemite West → Kings Canyon → Sequoia → Death Valley → Las Vegas → Grand Canyon → Joshua Tree → Palm Springs → Los Angeles → Port Hueneme (Malibu · Santa Barbara) → Cambria → Monterey (base Santa Cruz) → Silicon Valley → SFO</p>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">23</div><div class="stat-label">jours</div></div>
-      <div class="stat"><div class="stat-num">22</div><div class="stat-label">nuits</div></div>
+      <div class="stat"><div class="stat-num">24</div><div class="stat-label">jours</div></div>
+      <div class="stat"><div class="stat-num">23</div><div class="stat-label">nuits</div></div>
       <div class="stat"><div class="stat-num">14</div><div class="stat-label">étapes</div></div>
       <div class="stat"><div class="stat-num">5</div><div class="stat-label">parcs nationaux</div></div>
     </div>
@@ -97,7 +97,7 @@
   <div id="day-page-content"></div>
 </div>
 
-<footer>🌴 Road Trip Californie — 23 juil – 15 août 2026 &nbsp;·&nbsp; 23 jours · 14 étapes · 22 nuits &nbsp;·&nbsp; Famille 4 (adultes + enfants 11 et 15 ans)</footer>
+<footer>🌴 Road Trip Californie — 23 juil – 16 août 2026 &nbsp;·&nbsp; 24 jours · 14 étapes · 23 nuits &nbsp;·&nbsp; Famille 4 (adultes + enfants 11 et 15 ans)</footer>
 
 <!-- ═══════════════════════ DONNÉES ═══════════════════════════ -->
 <script src="days-data.js"></script>
@@ -152,6 +152,16 @@ function buildRecapTable() {
     '<th>#</th><th>Étape</th><th>Nuits</th><th>Dates</th><th>Sites principaux</th><th>Hébergement</th>' +
     '</tr></thead><tbody>';
   ETAPES.forEach(function(e) {
+    if (e.special) {
+      html += '<tr class="etape-special"><td colspan="6">' +
+        '<div class="etape-special-box">' +
+        '<span>' + e.icon + '</span>' +
+        '<strong>' + e.name + '</strong>' +
+        (e.desc ? '<span class="etape-special-desc">' + e.desc + '</span>' : '') +
+        '<span class="etape-special-dates">' + e.dates + '</span>' +
+        '</div></td></tr>';
+      return;
+    }
     html += '<tr>' +
       '<td>' + e.num + '</td>' +
       '<td><a class="etape-link" onclick="showDay(' + e.dayIdx + ')">' + e.icon + ' ' + e.name + '</a></td>' +
@@ -279,13 +289,14 @@ const DAY_COORDS = [
   [42,83], // J14 Los Angeles
   [42,83], // J15 Los Angeles
   [42,83], // J16 Los Angeles
-  [31,75], // J17 Santa Barbara
-  [21,54], // J18 Cambria
-  [15,34], // J19 Monterey
-  [15,34], // J20 Carmel
-  [12,22], // J21 Santa Cruz (interpolé entre Monterey et SF)
-  [15,34], // J22 Point Lobos / Aquarium Monterey
-  [11,12], // J23 SF → SFO départ
+  [42,83], // J17 Los Angeles (Eagle Rock)
+  [35,79], // J18 Port Hueneme (Oxnard) — arrivée
+  [39,81], // J19 Malibu (aller-retour Port Hueneme)
+  [31,75], // J20 Santa Barbara (aller-retour Port Hueneme)
+  [21,54], // J21 Cambria
+  [15,34], // J22 Monterey
+  [12,22], // J23 Point Lobos + Sortie Baleines + Carmel (base Santa Cruz)
+  [11,12], // J24 SF → SFO départ
 ];
 
 /* ── Calibration : clic sur la carte d'accueil → coordonnées ── */

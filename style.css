@@ -546,6 +546,23 @@ footer {
   .section-title { font-size: 1.1rem; }
 }
 
+/* ────── Ligne spéciale récapitulatif (conciergerie, événement) ────── */
+.etape-special td { padding: 4px 8px; }
+.etape-special-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #fffbeb, #fffff8);
+  border: 1px solid #fcd34d;
+  border-left: 4px solid #f59e0b;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.88rem;
+  color: #78350f;
+}
+.etape-special-desc  { font-size: 0.82rem; opacity: 0.85; }
+.etape-special-dates { margin-left: auto; font-size: 0.8rem; opacity: 0.8; white-space: nowrap; }
+
 /* ────── PIN Modal ────── */
 #pin-modal {
   display: none;

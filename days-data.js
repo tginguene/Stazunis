@@ -1,6 +1,6 @@
 ﻿/* ==============================================================
-   Road Trip Californie 2026 — Données planning v14
-   23 juillet – 15 août 2026 · 23 jours · 22 nuits
+   Road Trip Californie 2026 — Données planning v16
+   23 juillet – 16 août 2026 · 24 jours · 23 nuits
    ============================================================== */
 
 
@@ -117,7 +117,8 @@ const DAYS = [
       { time:"13h30", type:"walk", label:"🚶 À pied", desc:"Mirror Lake Trail : 5 km à pied plat. Vue sur Half Dome. (En août lac à demi sec mais balade belle.)", dur:"1h30" },
       { time:"15h05", type:"walk", label:"🚶 À pied", desc:"Balade libre : rives Merced River, vue El Capitan. Possibilité vélo de vallée.", dur:"1h" },
       { time:"16h10", type:"car", label:"🚗 Voiture", desc:"Parking Day Use Valley → condo Yosemite West", dur:"20 min" },
-      { time:"16h35", type:"activity", label:"🏃 Activité", desc:"Retour condo. Repos. Préparer bagages Kings Canyon.", dur:"" }
+      { time:"16h35", type:"activity", label:"🏃 Activité", desc:"Retour condo. Repos. Préparer bagages Kings Canyon.", dur:"" },
+      { time:"17h00", type:"activity", label:"🧺 Lessive", desc:"Lessive au condo (lave-linge sur place) — profitez-en avant la route vers Kings Canyon demain.", dur:"1h30" }
     ]
   },
   { num:"J7", date:"Mer 29 juil", title:"Olmsted Point + Tenaya Lake + Tuolumne → Mariposa Grove → Fresno → Kings Canyon",
@@ -196,33 +197,43 @@ const DAYS = [
       { time:"21h15", type:"walk", label:"🚶 À pied", desc:"The Strip by night : fontaines Bellagio, Caesar's Palace, MGM Grand.", dur:"2h" }
     ]
   },
-  { num:"J11", date:"Dim 2 août", title:"Las Vegas → Grand Canyon Village → Williams",
-    img: ["images/GrandCanyon.png", "images/GrandCanyonBus.png"],
+  { num:"J11", date:"Dim 2 août", title:"Las Vegas → Grand Canyon West (Hualapai Reservation) → Williams",
     activities:[
-      { time:"06h30", type:"activity", label:"🏃 Activité", desc:"🏨 [Départ hôtel 06h30] — Check-out hôtel Las Vegas. Bagages en voiture.", dur:"" },
-      { time:"", type:"alert", label:"⚠️ Fuseau", desc:"En quittant Las Vegas (Nevada) pour l'Arizona : avancez vos montres de +1h. L'Arizona ne change pas d'heure en été. 06h30 à Las Vegas = 07h30 en Arizona.", dur:"" },
-      { time:"06h30", type:"car", label:"🚗 Voiture", desc:"Las Vegas → Tusayan via I-11 + US-93 + I-40 E + Hwy 64 N — 440 km. Heure d'arrivée indiquée en heure Arizona.", dur:"4h30" },
-      { time:"", type:"tip", label:"💡 Conseil", desc:"Pause essence à Kingman (I-40). Plein avant la Hwy 64 — peu de stations jusqu'au Grand Canyon. ⚠️ Horaires navettes (jouer la sécurité sur la fin de la marche) : navette rouge (Hermits Rest) — dernier bus ~1h après le coucher du soleil (~19h35 début août → dernier bus ~20h35, être à l'arrêt avant ~20h05) ; navette bleue (Village) jusqu'à ~21h00-21h30 ; navette violette (Tusayan) 8h-21h45.", dur:"" },
-      { time:"12h00", type:"activity", label:"🏃 Activité", desc:"Arrivée Tusayan (heure Arizona). Garez-vous au Grand Canyon Visitor Center IMAX (450 State Route 64, Tusayan) — parking + arrêt navette violette au même endroit (parking-relais alternatif au nord de la ville, près du 2e rond-point, pour camping-cars/remorques).", dur:"" },
-      { time:"12h30", type:"meal", label:"🍽️ Déjeuner", desc:"Déjeuner à Tusayan avant d'entrer dans le parc.", dur:"1h" },
-      { time:"13h30", type:"transit", label:"🚌 Navette violette (Tusayan Route)", desc:"Depuis l'arrêt IMAX Tusayan → Grand Canyon Visitor Center. Toutes les 20 min (8h–21h45). Présentez l'America the Beautiful Pass — bypass de la file d'entrée.", dur:"20 min · pass" },
-      { time:"13h50", type:"walk", label:"🚶 À pied", desc:"Mather Point : premier choc visuel du canyon depuis le belvédère le plus fréquenté du South Rim.", dur:"20 min" },
-      { time:"14h10", type:"walk", label:"🚶 Rim Trail (vers l'ouest)", desc:"Marche Mather Point → Hermits Rest le long du Rim Trail (sentier goudronné/naturel en corniche, quasi plat) — ~20 km. Rythme tranquille, prendre son temps. Arrêts suggérés : Yavapai Point, Trailview Overlook, Maricopa Point, Powell Point, Hopi Point (meilleur panorama 180° du South Rim — à ne pas manquer), Mohave Point, The Abyss (falaise à pic 300m), Pima Point (vue sur le Colorado), puis Hermits Rest.", dur:"5h" },
-      { time:"19h10", type:"transit", label:"🚌 Navette rouge (Hermits Rest Route)", desc:"Hermits Rest → Village Route Transfer (retour direct, 4 arrêts seulement : Hermits Rest, Pima, Mohave, Powell Point).", dur:"30 min · pass" },
-      { time:"19h40", type:"transit", label:"🚌 Navette bleue (Village Route)", desc:"Village Route Transfer → Grand Canyon Visitor Center.", dur:"15 min · pass" },
-      { time:"19h55", type:"transit", label:"🚌 Navette violette (Tusayan Route)", desc:"Grand Canyon Visitor Center → arrêt IMAX Tusayan (récupération de la voiture). Toutes les 20 min.", dur:"20 min · pass" },
-      { time:"20h15", type:"car", label:"🚗 Voiture", desc:"Tusayan → Williams via Hwy 64 S + I-40 O — 90 km", dur:"1h" },
-      { time:"21h15", type:"activity", label:"🏃 Activité", desc:"Check-in Americas Best Value Inn · 302 East Route 66, Williams AZ 86046 (Booking · petit déjeuner inclus). Plein d'essence.", dur:"" }
+      { time:"09h00", type:"activity", label:"🏃 Activité", desc:"🏨 [Départ hôtel Ellis Island (Las Vegas) 09h00] — Check-out hôtel Las Vegas. Bagages en voiture.", dur:"" },
+      { time:"09h00", type:"car", label:"🚗 Voiture", desc:"Las Vegas → Grand Canyon West Main Terminal (Hualapai Reservation) via US-93 Sud + Pierce Ferry Rd + Diamond Bar Rd — 200 km", dur:"2h30" },
+      { time:"11h30", type:"activity", label:"🏃 Activité", desc:"Grand Canyon West Main Terminal : retrait des billets (All-Access Pass avec Skywalk conseillé, ~99 $/pers, sinon General Admission ~67 $/pers) et du pass navette hop-on-hop-off gratuit et illimité entre les 3 sites.", dur:"20 min" },
+      { time:"", type:"tip", label:"💡 Conseil", desc:"Accès uniquement en navette au-delà du Main Terminal — pas de voiture particulière sur le site. Sacs et objets à déposer en casier gratuit avant le Skywalk ; téléphones/appareils photo autorisés depuis 2026. Réservez les billets à l'avance sur grandcanyonwest.com.", dur:"" },
+      { time:"11h50", type:"transit", label:"🚌 Navette", desc:"Main Terminal → Hualapai Ranch", dur:"10 min" },
+      { time:"12h00", type:"activity", label:"🤠 Activité", desc:"Hualapai Ranch : ambiance western, spectacle de cow-boys, balades à cheval ou en chariot (en option).", dur:"30 min" },
+      { time:"12h30", type:"transit", label:"🚌 Navette", desc:"Hualapai Ranch → Eagle Point", dur:"10 min" },
+      { time:"12h40", type:"walk", label:"🚶 Skywalk", desc:"Eagle Point : Skywalk (passerelle de verre en fer à cheval suspendue à 1200m au-dessus du canyon) + Native American Village (habitats traditionnels de plusieurs tribus, démonstrations culturelles).", dur:"1h30" },
+      { time:"14h10", type:"transit", label:"🚌 Navette", desc:"Eagle Point → Guano Point", dur:"15 min" },
+      { time:"14h25", type:"meal", label:"🍽️ Déjeuner", desc:"Déjeuner sur place — stand BBQ/burgers à Guano Point.", dur:"45 min" },
+      { time:"15h10", type:"walk", label:"🚶 À pied", desc:"Guano Point : point de vue le plus spectaculaire du site, vestiges du téléphérique de l'ancienne mine de guano, sentier sur la mesa à 360°.", dur:"45 min" },
+      { time:"15h55", type:"transit", label:"🚌 Navette", desc:"Guano Point → Main Terminal (récupération voiture)", dur:"20 min" },
+      { time:"16h15", type:"car", label:"🚗 Voiture", desc:"Grand Canyon West → Williams via Pierce Ferry Rd + US-93 Sud (Kingman) + I-40 Est — 305 km", dur:"3h20" },
+      { time:"19h35", type:"activity", label:"🏃 Activité", desc:"Check-in Americas Best Value Inn · 302 East Route 66, Williams AZ 86046 (Booking · petit déjeuner inclus). Plein d'essence.", dur:"" },
+      { time:"20h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Williams — Route 66.", dur:"1h" },
+      { time:"", type:"alert", label:"⚠️ Alerte", desc:"Journée longue (départ 9h, retour hôtel ~19h35). Pas de décalage horaire entre Las Vegas et l'Arizona en août (les deux suivent l'heure d'été du Pacifique en été).", dur:"" }
     ]
   },
-  { num:"J12", date:"Lun 3 août", title:"Williams → Joshua Tree",
+  { num:"J12", date:"Lun 3 août", title:"Grand Canyon South Rim (Rim Trail 5h) → Palm Springs",
+    img: ["images/GrandCanyon.png", "images/GrandCanyonBus.png"],
     activities:[
-      { time:"08h30", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Americas Best Value Inn (Williams) 08h30] — Williams → Joshua Tree town via I-40 O + CA-62 — 512 km", dur:"5h20" },
-      { time:"", type:"tip", label:"💡 Conseil", desc:"Pause essence à Kingman (AZ) avant la frontière. Arrêt possible à Seligman (Route 66) — inspiration de Radiator Springs dans Cars.", dur:"" },
-      { time:"11h30", type:"meal", label:"🍽️ Déjeuner", desc:"Pause déjeuner à Needles (CA) — première ville californienne sur I-40. Heure Pacifique.", dur:"1h" },
-      { time:"15h00", type:"car", label:"🚗 Voiture", desc:"Première découverte du parc en voiture — arrêts rapides : Skull Rock (10 min), Cholla Cactus Garden (10 min).", dur:"1h" },
-      { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Joshua Tree town.", dur:"1h" },
-      { time:"22h00", type:"car", label:"🚗 Voiture", desc:"→ parc : ciel étoilé exceptionnel (zéro pollution lumineuse).", dur:"10 min" }
+      { time:"06h00", type:"activity", label:"🏃 Activité", desc:"Lever tôt — petit-déjeuner Americas Best Value Inn (inclus). Bagages en voiture, check-out.", dur:"" },
+      { time:"06h30", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Americas Best Value Inn (Williams) 06h30] — Williams → Tusayan via I-40 Est + Hwy 64 Nord — 90 km", dur:"1h" },
+      { time:"07h30", type:"activity", label:"🏃 Activité", desc:"Arrivée Tusayan. Garez-vous au Grand Canyon Visitor Center IMAX (450 State Route 64, Tusayan) — parking + arrêt navette violette au même endroit.", dur:"" },
+      { time:"07h45", type:"transit", label:"🚌 Navette violette (Tusayan Route)", desc:"Depuis l'arrêt IMAX Tusayan → Grand Canyon Visitor Center. Toutes les 20 min (8h–21h45). Présentez l'America the Beautiful Pass — bypass de la file d'entrée.", dur:"20 min · pass" },
+      { time:"08h05", type:"walk", label:"🚶 À pied", desc:"Mather Point : premier choc visuel du canyon depuis le belvédère le plus fréquenté du South Rim.", dur:"20 min" },
+      { time:"08h25", type:"walk", label:"🚶 Rim Trail (vers l'ouest)", desc:"Marche Mather Point → Hermits Rest le long du Rim Trail (sentier goudronné/naturel en corniche, quasi plat) — ~20 km. Rythme tranquille, prendre son temps. Arrêts suggérés : Yavapai Point, Trailview Overlook, Maricopa Point, Powell Point, Hopi Point (meilleur panorama 180° du South Rim — à ne pas manquer), Mohave Point, The Abyss (falaise à pic 300m), Pima Point (vue sur le Colorado), puis Hermits Rest.", dur:"5h" },
+      { time:"13h25", type:"transit", label:"🚌 Navette rouge (Hermits Rest Route)", desc:"Hermits Rest → Village Route Transfer (retour direct, 4 arrêts seulement : Hermits Rest, Pima, Mohave, Powell Point).", dur:"30 min · pass" },
+      { time:"13h55", type:"transit", label:"🚌 Navette bleue (Village Route)", desc:"Village Route Transfer → Grand Canyon Visitor Center.", dur:"15 min · pass" },
+      { time:"14h10", type:"transit", label:"🚌 Navette violette (Tusayan Route)", desc:"Grand Canyon Visitor Center → arrêt IMAX Tusayan (récupération de la voiture). Toutes les 20 min.", dur:"20 min · pass" },
+      { time:"14h30", type:"meal", label:"🍽️ Déjeuner", desc:"Déjeuner tardif à Tusayan avant la longue route vers Palm Springs.", dur:"45 min" },
+      { time:"15h15", type:"car", label:"🚗 Voiture", desc:"Tusayan → Palm Springs via Hwy 64 Sud + I-40 Ouest + I-10 Est — 650 km", dur:"6h15" },
+      { time:"21h30", type:"activity", label:"🏃 Activité", desc:"Check-in Caliente Tropics · 411 East Palm Canyon Drive, Palm Springs CA 92262 (Booking · ⚠️ petit déjeuner NON inclus).", dur:"" },
+      { time:"22h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner tardif Palm Springs — options limitées à cette heure, prévoir repas simple ou à emporter.", dur:"" },
+      { time:"", type:"alert", label:"⚠️ Alerte", desc:"Journée très longue (lever 6h, arrivée hôtel ~21h30) : randonnée 5h + 6h15 de route l'après-midi. Prévoir relève au volant si possible, pauses régulières et bonne hydratation. Pas de décalage horaire Arizona → Californie en été.", dur:"" }
     ]
   },
   { num:"J13", date:"Mar 4 août", title:"Joshua Tree (matin) → Palm Springs",
@@ -240,14 +251,16 @@ const DAYS = [
       { time:"10h35", type:"walk", label:"🚶 À pied", desc:"Cholla Cactus Garden : cactus argentés translucides sur boucle de 0,4 km. Attention aux épines — ne pas toucher !", dur:"20 min" },
       { time:"12h30", type:"meal", label:"🍽️ Déjeuner", desc:"Déjeuner Joshua Tree town avant le départ.", dur:"1h" },
       { time:"13h30", type:"car", label:"🚗 Voiture", desc:"Joshua Tree → Palm Springs via CA-62 + Hwy 111 — 70 km", dur:"45 min" },
-      { time:"14h15", type:"activity", label:"🏃 Activité", desc:"Check-in Caliente Tropics · 411 East Palm Canyon Drive, Palm Springs CA 92262 (Booking · ⚠️ petit déjeuner NON inclus). Piscine méritée !", dur:"1h" },
+      { time:"14h15", type:"activity", label:"🏃 Activité", desc:"Retour à l'hôtel Caliente Tropics — piscine méritée !", dur:"1h" },
       { time:"15h30", type:"car", label:"🚗 Voiture", desc:"Hôtel → Aerial Tramway (Tramway Rd, nord ville)", dur:"10 min" },
       { time:"15h40", type:"parking", label:"🅿 Parking", desc:"Aerial Tramway Lot", dur:"Gratuit" },
       { time:"16h00", type:"walk", label:"🚶 À pied", desc:"Sommet San Jacinto : randonnée légère dans les pins, vue sur tout le désert.", dur:"45 min" },
       { time:"17h30", type:"walk", label:"🚶 À pied", desc:"Marilyn Forever (Museum Dr) : statue 11m. Photo.", dur:"15 min" },
       { time:"17h50", type:"walk", label:"🚶 À pied", desc:"Palm Canyon Drive : boutiques mid-century moderne.", dur:"30 min" },
       { time:"18h25", type:"car", label:"🚗 Voiture", desc:"Centre → Graffiti Yard (Art District)", dur:"10 min" },
-      { time:"18h40", type:"walk", label:"🚶 À pied", desc:"Graffiti Yard + murales Art District + Public Art Wings.", dur:"30 min" }
+      { time:"18h40", type:"walk", label:"🚶 À pied", desc:"Graffiti Yard + murales Art District + Public Art Wings.", dur:"30 min" },
+      { time:"19h15", type:"car", label:"🚗 Voiture", desc:"Art District → Wash Time Coin Laundry · 1751 N Sunrise Way D1, Palm Springs — ~4 km", dur:"10 min" },
+      { time:"19h25", type:"activity", label:"🧺 Lessive", desc:"Wash Time Coin Laundry · 1751 N Sunrise Way D1. Lessive complète.", dur:"2h" }
     ]
   },
   { num:"J14", date:"Mer 5 août", title:"Palm Springs → Cimetière Westwood → Château Marmont (photo) → Venice Beach · Venice Canal · Abbot Kinney · Santa Monica",
@@ -315,7 +328,7 @@ const DAYS = [
       { time:"19h30", type:"meal", label:"🍽️ Dîner", desc:"Dîner Highland Park (York Blvd) — 5 min depuis The Hills Inn Eagle Rock.", dur:"1h" }
     ]
   },
-  { num:"J18", date:"Dim 9 août", title:"METRO : Highland Park · Downtown LA → Malibu (arrêt) → Santa Barbara",
+  { num:"J18", date:"Dim 9 août", title:"METRO : Highland Park · Downtown LA → Port Hueneme (Oxnard)",
     activities:[
       { time:"09h20", type:"info", label:"🏨 Hôtel", desc:"🏨 [Départ hôtel The Hills Inn Eagle Rock 09h20] — Hôtel Mount Washington — départ à pied vers la station A Line Southwest Museum (10 min, avant le Metro de 09h30).", dur:"" },
       { time:"09h30", type:"transit", label:"🚇 Metro A Line", desc:"Southwest Museum → Highland Park (Ave 57) · 1 station · 3 min", dur:"$1.75" },
@@ -329,21 +342,53 @@ const DAYS = [
       { time:"14h10", type:"transit", label:"🚇 Metro B+A Line", desc:"Pershing Square → Union Station (B Line) → Southwest Museum (A Line) · 25 min total", dur:"$1.75" },
       { time:"14h35", type:"walk", label:"🚶 À pied", desc:"Station Southwest Museum → hôtel Mount Washington · 10 min à pied", dur:"10 min" },
       { time:"14h50", type:"activity", label:"🏃 Activité", desc:"Récupérer voiture. Check-out The Hills Inn Eagle Rock · 2300 Colorado Blvd, Los Angeles CA 90041 (Airbnb · petit déjeuner inclus). Bagages en voiture.", dur:"" },
-      { time:"15h30", type:"car", label:"🚗 Voiture", desc:"Mount Washington → Malibu Point Dume via I-110 S + I-10 O + Pacific Coast Highway (PCH) — 55 km", dur:"45 min" },
-      { time:"16h15", type:"parking", label:"🅿 Parking", desc:"Westward Beach Road, Malibu (Point Dume State Beach)", dur:"~$12" },
-      { time:"17h10", type:"car", label:"🚗 Voiture", desc:"Malibu Point Dume → Santa Barbara via PCH + US-101 Nord — 150 km", dur:"1h30" },
-      { time:"18h40", type:"activity", label:"🏃 Activité", desc:"Check-in Orange Tree Inn · 1920 State Street, Santa Barbara CA 93101 (Booking · ⚠️ petit déjeuner NON inclus).", dur:"" },
-      { time:"19h00", type:"car", label:"🚗 Voiture", desc:"Hôtel → Mission Santa Barbara (2201 Laguna Street) — 10 min", dur:"10 min" },
-      { time:"19h10", type:"parking", label:"🅿 Parking", desc:"Mission Santa Barbara — parking Laguna Street", dur:"Gratuit" },
-      { time:"19h15", type:"walk", label:"🚶 À pied", desc:"Mission Santa Barbara (1786) : façade baroque espagnole et jardins extérieurs. Photo depuis le parvis. La plus belle des missions californiennes. (Visite intérieure 9h–17h si vous souhaitez revenir lundi matin)", dur:"20 min" },
-      { time:"19h50", type:"walk", label:"🚶 À pied", desc:"Plage Santa Barbara : coucher de soleil sur le Pacifique. East Beach ou Leadbetter Beach.", dur:"1h" },
-      { time:"", type:"tip", label:"💡 Courses", desc:"Petit déjeuner NON inclus à l'Orange Tree Inn — achetez provisions ce soir à Von's · 116 W Micheltorena St, Santa Barbara (5 min depuis l'hôtel).", dur:"30 min" },
-      { time:"", type:"alert", label:"⚠️ Alerte", desc:"Arrivée tardive — réservez le restaurant à l'avance. Certains restaurants ferment à 21h30 en semaine.", dur:"" }
+      { time:"15h00", type:"car", label:"🚗 Voiture", desc:"Mount Washington → Port Hueneme (Oxnard) via CA-134 O + US-101 Nord — 100 km", dur:"1h20" },
+      { time:"16h20", type:"activity", label:"🏃 Activité", desc:"Check-in Hotel Oxnard · 1311 Mandalay Beach Road, Oxnard CA 93035 (Airbnb · ⚠️ petit déjeuner NON inclus).", dur:"" },
+      { time:"17h00", type:"activity", label:"🏊 Baignade", desc:"Mandalay Beach : plage juste devant l'hébergement. Soirée baignade et détente en famille, coucher de soleil sur le Pacifique.", dur:"2h" },
+      { time:"19h30", type:"meal", label:"🍽️ Dîner", desc:"Dîner Port Hueneme / Oxnard — restaurants du Channel Islands Harbor.", dur:"1h" },
+      { time:"", type:"tip", label:"💡 Courses", desc:"Petit déjeuner NON inclus à l'hébergement — achetez provisions ce soir (Vons/Ralphs à Oxnard) pour les prochains matins.", dur:"30 min" },
+      { time:"", type:"alert", label:"⚠️ Alerte", desc:"Solde de 73,80 € restant à payer sur place pour l'hébergement (Airbnb).", dur:"" }
     ]
   },
-  { num:"J19", date:"Lun 10 août", title:"Santa Barbara → Piedras Blancas → Hearst Castle → Cambria",
+  { num:"J19", date:"Lun 10 août", title:"Malibu : El Matador (2h plage) · Point Dume · Malibu Pier & Lagoon (aller-retour Port Hueneme)",
     activities:[
-      { time:"09h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Orange Tree Inn (Santa Barbara) 09h00] — Santa Barbara → Piedras Blancas (San Simeon) via US-101 + CA-1 — 200 km", dur:"2h30" },
+      { time:"09h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Hotel Oxnard (Port Hueneme) 09h00] — Port Hueneme (Oxnard) → El Matador State Beach (Malibu) via PCH/CA-1 — 50 km", dur:"50 min" },
+      { time:"09h50", type:"parking", label:"🅿 Parking", desc:"El Matador State Beach Lot · 32350 Pacific Coast Hwy, Malibu", dur:"$12" },
+      { time:"09h55", type:"walk", label:"🏖️ Plage", desc:"El Matador State Beach — la plus belle plage de Malibu : falaises, arches et grottes marines, sable doré. Détente, baignade, exploration des rochers à marée basse. Accès par escalier abrupt.", dur:"2h" },
+      { time:"11h55", type:"car", label:"🚗 Voiture", desc:"El Matador → Point Dume State Beach", dur:"15 min" },
+      { time:"12h10", type:"parking", label:"🅿 Parking", desc:"Westward Beach Road, Malibu (Point Dume State Beach)", dur:"~$12" },
+      { time:"12h15", type:"walk", label:"🚶 À pied", desc:"Point Dume Trail : promontoire rocheux, vue panoramique sur toute la baie de Santa Monica. Observation de baleines possible en saison.", dur:"1h" },
+      { time:"13h15", type:"car", label:"🚗 Voiture", desc:"Point Dume → Malibu Country Mart", dur:"15 min" },
+      { time:"13h30", type:"meal", label:"🍽️ Déjeuner", desc:"Déjeuner — Malibu Country Mart / Cross Creek : restaurants et boutiques chics en plein air.", dur:"1h" },
+      { time:"14h30", type:"car", label:"🚗 Voiture", desc:"Malibu Country Mart → Malibu Pier", dur:"10 min" },
+      { time:"14h40", type:"parking", label:"🅿 Parking", desc:"Malibu Pier Lot · 25000 Pacific Coast Hwy — parking payant à l'horodateur, pas de réservation. Couvre aussi la Lagoon et Adamson House (2 min à pied).", dur:"$3–4/h" },
+      { time:"14h45", type:"walk", label:"🚶 À pied", desc:"Malibu Pier (1905) : jetée historique, pêcheurs, vue sur Surfrider Beach — spot de surf mythique.", dur:"45 min" },
+      { time:"15h30", type:"walk", label:"🚶 À pied", desc:"Malibu Lagoon State Beach + Adamson House (tuiles espagnoles peintes à la main) — juste à côté du pier, même parking.", dur:"45 min" },
+      { time:"16h15", type:"car", label:"🚗 Voiture", desc:"Malibu Pier → Port Hueneme (Oxnard) via PCH + US-101 Nord — 75 km", dur:"1h" },
+      { time:"19h30", type:"meal", label:"🍽️ Dîner", desc:"Dîner Port Hueneme / Oxnard.", dur:"1h" }
+    ]
+  },
+  { num:"J20", date:"Mar 11 août", title:"Santa Barbara : Mission · Courthouse · State Street · Stearns Wharf (aller-retour Port Hueneme)",
+    activities:[
+      { time:"09h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Hotel Oxnard (Port Hueneme) 09h00] — Port Hueneme (Oxnard) → Santa Barbara via US-101 Nord — 90 km", dur:"1h" },
+      { time:"10h00", type:"parking", label:"🅿 Parking", desc:"Mission Santa Barbara — parking Laguna Street", dur:"Gratuit" },
+      { time:"10h05", type:"walk", label:"🚶 À pied", desc:"Mission Santa Barbara (1786) : façade baroque espagnole, jardins et cimetière historique. La plus belle des missions californiennes.", dur:"45 min" },
+      { time:"10h50", type:"car", label:"🚗 Voiture", desc:"Mission → Santa Barbara County Courthouse", dur:"10 min" },
+      { time:"11h00", type:"walk", label:"🚶 À pied", desc:"Santa Barbara County Courthouse (1929) : architecture espagnole revival, tour de l'horloge El Mirador — vue panoramique gratuite sur la ville et l'océan.", dur:"45 min" },
+      { time:"11h45", type:"walk", label:"🚶 À pied", desc:"State Street : boutiques, architecture méditerranéenne, ambiance animée.", dur:"45 min" },
+      { time:"12h30", type:"meal", label:"🍽️ Déjeuner", desc:"Déjeuner — State Street, Santa Barbara.", dur:"1h" },
+      { time:"13h30", type:"walk", label:"🚶 À pied", desc:"Stearns Wharf (1872) : jetée historique, restaurants, boutiques, vue sur le port de plaisance.", dur:"45 min" },
+      { time:"14h15", type:"walk", label:"🚶 À pied", desc:"Santa Barbara Harbor : bateaux de pêche, otaries, promenade du front de mer.", dur:"30 min" },
+      { time:"14h45", type:"car", label:"🚗 Voiture", desc:"Harbor → East Beach", dur:"10 min" },
+      { time:"15h00", type:"walk", label:"🚶 À pied", desc:"East Beach : plage principale de Santa Barbara, vue sur les Channel Islands. Temps libre.", dur:"2h" },
+      { time:"17h30", type:"car", label:"🚗 Voiture", desc:"East Beach → Port Hueneme (Oxnard) via US-101 Sud — 90 km", dur:"1h" },
+      { time:"18h30", type:"activity", label:"🧺 Lessive", desc:"Lessive à l'hébergement (lave-linge sur place).", dur:"1h30" },
+      { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Port Hueneme / Oxnard.", dur:"1h" }
+    ]
+  },
+  { num:"J21", date:"Mer 12 août", title:"Port Hueneme → Piedras Blancas → Hearst Castle → Cambria",
+    activities:[
+      { time:"08h15", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Hotel Oxnard (Port Hueneme) 08h15] — Port Hueneme (Oxnard) → Piedras Blancas (San Simeon) via US-101 + CA-1 — 290 km", dur:"3h15" },
       { time:"11h30", type:"parking", label:"🅿 Parking", desc:"Piedras Blancas Rookery Lot · CA-1, San Simeon CA 93452", dur:"Gratuit" },
       { time:"13h30", type:"car", label:"🚗 Voiture", desc:"Piedras Blancas → Hearst Castle Visitor Center — 15 min", dur:"15 min" },
       { time:"13h50", type:"transit", label:"🚌 Navette obligatoire", desc:"Visitor center → château (accès voiture impossible). Navette incluse.", dur:"5 min" },
@@ -354,7 +399,7 @@ const DAYS = [
       { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Cambria en ville.", dur:"1h" }
     ]
   },
-  { num:"J20", date:"Mar 11 août", title:"Cambria → Big Sur (McWay Falls · Partington Cove · Bixby Bridge) → Monterey",
+  { num:"J22", date:"Jeu 13 août", title:"Cambria → Big Sur (McWay Falls · Partington Cove · Bixby Bridge) → Monterey",
     activities:[
       { time:"09h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Cambria 09h00] — Cambria → McWay Falls (Julia Pfeiffer Burns SP) via Hwy 1 — 1h", dur:"1h" },
       { time:"10h00", type:"parking", label:"🅿 Parking", desc:"McWay Falls Lot · Hwy 1, Julia Pfeiffer Burns SP", dur:"Gratuit (pass)" },
@@ -372,40 +417,28 @@ const DAYS = [
       { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Cannery Row — Monterey.", dur:"1h" }
     ]
   },
-  { num:"J21", date:"Mer 12 août", title:"Sortie Baleines 10h · Cannery Row · 17-Mile Drive · Mission Ranch",
+  { num:"J23", date:"Ven 14 août", title:"Point Lobos (matin) + Sortie Baleines 13h30 · Carmel village",
     activities:[
-      { time:"09h10", type:"parking", label:"🅿 Parking", desc:"🏨 [Départ hôtel Santa Cruz ~08h25, ~40 min de route jusqu'à Monterey] — Fisherman's Wharf Lot · 99 Pacific St, Monterey CA 93940 · garez pour toute la matinée.", dur:"$3–4/h" },
-      { time:"10h00", type:"boat", label:"⛴ Bateau", desc:"Sortie baleines Monterey Bay Whale Watch (3h) : baleines à bosse, dauphins, loutres. Juillet–août = pic de saison.", dur:"3h · ~$60/pers" },
-      { time:"13h00", type:"meal", label:"🍽️ Déjeuner", desc:"Pause déjeuner — Cannery Row : fruits de mer, ambiance Steinbeck.", dur:"1h" },
-      { time:"14h05", type:"car", label:"🚗 Voiture", desc:"Cannery Row → entrée Pacific Grove (17-Mile Drive) — 15 min", dur:"15 min" },
-      { time:"14h20", type:"parking", label:"🅿 Parking", desc:"Entrée Pebble Beach · Forest Lodge Gate, Pacific Grove", dur:"$12 droit de passage" },
-      { time:"14h30", type:"car", label:"🚗 Voiture", desc:"17-Mile Drive : Lone Cypress · Bird Rock · Seal Rock · Pebble Beach Golf Course · Pescadero Point. Stops voiture + courtes marches.", dur:"1h" },
-      { time:"15h35", type:"car", label:"🚗 Voiture", desc:"17-Mile Drive → Mission Ranch Carmel (26270 Dolores Street) — 15 min", dur:"15 min" },
-      { time:"16h00", type:"activity", label:"🏃 Activité", desc:"Mission Ranch de Clint Eastwood : prairie avec moutons, vue sur Point Lobos. Piano bar ouvert à 16h. Eastwood parfois présent entre 16h et 18h.", dur:"" },
-      { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Mission Ranch Restaurant : cuisine américaine, piano en direct, terrasse panoramique.", dur:"1h" }
+      { time:"07h30", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Aqua Breeze Inn (Santa Cruz) 07h30] — Santa Cruz → Point Lobos State Natural Reserve via Hwy 1 Sud — 80 km", dur:"1h15" },
+      { time:"08h45", type:"parking", label:"🅿 Parking", desc:"Point Lobos Entrance Lot · 62 CA-1, Carmel-by-the-Sea CA 93923", dur:"$10" },
+      { time:"", type:"alert", label:"⚠️ Alerte", desc:"PAS de réservation en ligne (Point Lobos n'est pas sur ReserveCalifornia ; le futur système ParkIT! n'est pas encore lancé) — entrée 10 $/véhicule payable sur place, premier arrivé premier servi. Parking limité (~150 places), ferme dès qu'il est complet en été et rouvre au fil des départs — arrivez avant 9h pour être sûrs d'entrer.", dur:"" },
+      { time:"08h50", type:"walk", label:"🚶 À pied", desc:"Point Lobos State Natural Reserve : loutres de mer, phoques, lions de mer, cyprès centenaires. Cypress Grove Trail (2 km) + Bird Island Trail. Visite tranquille, sans être pressés par le bateau.", dur:"1h45" },
+      { time:"10h35", type:"car", label:"🚗 Voiture", desc:"Point Lobos → Fisherman's Wharf (Monterey)", dur:"20 min" },
+      { time:"10h55", type:"parking", label:"🅿 Parking", desc:"Fisherman's Wharf Lot · 99 Pacific St, Monterey CA 93940", dur:"$3–4/h" },
+      { time:"11h00", type:"meal", label:"🍽️ Déjeuner", desc:"Pause déjeuner — Cannery Row : fruits de mer, ambiance Steinbeck.", dur:"1h30" },
+      { time:"13h30", type:"boat", label:"⛴ Bateau", desc:"Sortie baleines Monterey Bay Whale Watch (3h) : baleines à bosse, dauphins, loutres. Créneau après-midi d'été (13h30).", dur:"3h · ~$60/pers" },
+      { time:"16h30", type:"car", label:"🚗 Voiture", desc:"Fisherman's Wharf → Carmel-by-the-Sea", dur:"15 min" },
+      { time:"16h45", type:"parking", label:"🅿 Parking", desc:"Parking municipal Carmel · Junipero St & 3rd Ave", dur:"Gratuit 2h" },
+      { time:"16h50", type:"walk", label:"🚶 À pied", desc:"Carmel-by-the-Sea : village sans numéros de rues · boutiques d'art · galeries · Ocean Avenue jusqu'à la plage (sable blanc, eau turquoise).", dur:"1h" },
+      { time:"17h50", type:"car", label:"🚗 Voiture", desc:"Carmel → Santa Cruz via Hwy 1 Nord — 80 km", dur:"1h15" },
+      { time:"19h30", type:"meal", label:"🍽️ Dîner", desc:"Dîner Santa Cruz — Municipal Wharf ou West Cliff Drive.", dur:"1h" },
+      { time:"", type:"tip", label:"💡 Conseil", desc:"Sortie baleines à 13h30 (créneau après-midi d'été) plutôt qu'à 9h/10h — vérifiez l'horaire exact sur montereybaywhalewatch.com/schedule avant de partir (peut varier selon le jour). 17-Mile Drive, Mission Ranch et Aquarium Monterey retirés faute de temps. Préparez les bagages ce soir — départ 8h30 demain pour SFO via Silicon Valley.", dur:"" }
     ]
   },
-  { num:"J22", date:"Jeu 13 août", title:"Point Lobos 8h · Carmel village · Aquarium Monterey",
+  { num:"J24", date:"Sam 15 août", title:"Stanford · Google · Meta (photo) · Apple Park → SFO · Vol 16h05",
     activities:[
-      { time:"07h30", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Hotel Santa Cruz (base Monterey) 07h30] — Hôtel → Point Lobos State Natural Reserve — 20 min", dur:"20 min" },
-      { time:"07h40", type:"parking", label:"🅿 Parking", desc:"Point Lobos Entrance Lot · 62 CA-1, Carmel-by-the-Sea CA 93923", dur:"$10" },
-      { time:"", type:"alert", label:"⚠️ Alerte", desc:"Réservation parking OBLIGATOIRE sur reservecalifornia.com — complet dès 9h en été. Sans réservation : refoulement à l'entrée. Créneau 8h recommandé.", dur:"" },
-      { time:"08h00", type:"walk", label:"🚶 À pied", desc:"Point Lobos State Natural Reserve : loutres de mer, phoques, lions de mer, cyprès centenaires. Cypress Grove Trail (2 km) + Bird Island Trail. L'une des plus belles réserves de Californie.", dur:"1h30" },
-      { time:"09h45", type:"parking", label:"🅿 Parking", desc:"Parking municipal Carmel · Junipero St & 3rd Ave", dur:"Gratuit 2h" },
-      { time:"09h50", type:"walk", label:"🚶 À pied", desc:"Carmel-by-the-Sea : village sans numéros de rues · boutiques d'art · galeries · Ocean Avenue jusqu'à la plage (sable blanc, eau turquoise).", dur:"1h" },
-      { time:"12h30", type:"meal", label:"🍽️ Déjeuner", desc:"Pause déjeuner — Carmel village.", dur:"1h" },
-      { time:"14h00", type:"car", label:"🚗 Voiture", desc:"Carmel → Monterey Bay Aquarium — 15 min", dur:"15 min" },
-      { time:"14h15", type:"parking", label:"🅿 Parking", desc:"Monterey Bay Aquarium Parking · 886 Cannery Row, Monterey CA 93940", dur:"$20" },
-      { time:"14h20", type:"walk", label:"🚶 À pied", desc:"Monterey Bay Aquarium : loutres de mer, méduses géantes, requins, kelp forest. L'un des meilleurs aquariums du monde. Excellent pour les enfants.", dur:"2h" },
-      { time:"", type:"alert", label:"⚠️ Alerte", desc:"Réservez les billets en ligne sur montereybayaquarium.org — file très longue sans réservation en août.", dur:"" },
-      { time:"16h30", type:"car", label:"🚗 Voiture", desc:"Aquarium → hôtel Monterey", dur:"15 min" },
-      { time:"", type:"tip", label:"💡 Conseil", desc:"Préparez les bagages ce soir — départ 8h00 demain pour SFO via Silicon Valley.", dur:"" }
-    ]
-  },
-  { num:"J23", date:"Ven 14 août", title:"Stanford · Google · Meta (photo) · Apple Park → SFO · Vol 16h05",
-    activities:[
-      { time:"08h00", type:"activity", label:"🏃 Activité", desc:"🏨 [Départ hôtel Hotel Santa Cruz (base Monterey) 08h00] — Check-out hôtel Monterey. Bagages en voiture. Départ 8h au plus tard.", dur:"" },
-      { time:"08h00", type:"car", label:"🚗 Voiture", desc:"Monterey → Stanford University (Palo Alto) via US-101 N — 110 km", dur:"1h30" },
+      { time:"08h30", type:"activity", label:"🏃 Activité", desc:"🏨 [Départ hôtel Aqua Breeze Inn (Santa Cruz) 08h30] — Check-out hôtel Santa Cruz. Bagages en voiture. Départ 8h30 au plus tard.", dur:"" },
+      { time:"08h30", type:"car", label:"🚗 Voiture", desc:"Santa Cruz → Stanford University (Palo Alto) via Hwy 17 N + I-280 N — 65 km", dur:"1h" },
       { time:"09h30", type:"parking", label:"🅿 Parking", desc:"Stanford University · Palm Drive, Palo Alto CA 94305", dur:"Gratuit w-e · $3/h semaine" },
       { time:"09h35", type:"walk", label:"🚶 À pied", desc:"Stanford University : Memorial Church (néo-roman doré), Hoover Tower, Inner Quad. Campus de 3300 ha.", dur:"45 min" },
       { time:"10h25", type:"car", label:"🚗 Voiture", desc:"Stanford → Google Visitor Experience (Mountain View) via US-101 N — 15 min", dur:"15 min" },
@@ -423,7 +456,7 @@ const DAYS = [
       { time:"13h25", type:"activity", label:"🏃 Activité", desc:"Arrivée SFO. Restitution voiture de location — retour véhicule + navette terminal : prévoir 45 min minimum.", dur:"45 min" },
       { time:"14h10", type:"activity", label:"🏃 Activité", desc:"Enregistrement + sécurité SFO. Prévoir 1h30 minimum pour l'international en haute saison.", dur:"" },
       { time:"16h05", type:"activity", label:"🏃 Activité", desc:"✈️ DÉCOLLAGE SFO → Paris Orly. Bon voyage !", dur:"" },
-      { time:"", type:"alert", label:"⚠️ Alerte", desc:"Timing serré ce dernier jour — partez de Monterey à 8h00 impérativement. En cas de retard, supprimez Meta pour gagner 25 min.", dur:"" }
+      { time:"", type:"alert", label:"⚠️ Alerte", desc:"Timing serré ce dernier jour — partez de Santa Cruz à 8h30 impérativement. En cas de retard, supprimez Meta pour gagner 25 min.", dur:"" }
     ]
   }
 ];
@@ -437,6 +470,7 @@ const ETAPES = [
   { num:1,  icon:"🌉", name:"San Francisco",           dayIdx:0,  nuits:3, dates:"Jeu 23 – Dim 26 juil",
     sites:"Pier 39, vélo Golden Gate + Sausalito (ferry), Lombard St, Filbert St, Chinatown, Painted Ladies, Battery Spencer, Twin Peaks, Coit Tower, Ferry Building, Haight-Ashbury, Castro, Columbia State Historic Park",
     hotelEnc:"NfPYr8AaSxP69tHL:I5FXsEqD7OVScHT4r+JVRrPDdBqCe2C8O7agCNpeap69Cgrxk1tawzSnXy0nTBOjqt+H8YyhxPvjE8kd+/NrFqFIPoTiY72AdbYuZYu3Hyc=" },
+  { special:true, icon:"🛎️", name:"Conciergerie", dates:"Dim 26 juil", desc:"Check out : 1h · Vérification Ménage : 4h à 6h · Check in : à partir de 7h - Kelly" },
   { num:2,  icon:"🏔️", name:"Yosemite West",           dayIdx:3,  nuits:3, dates:"Dim 26 – Mer 29 juil",
     sites:"Glacier Point (2200m), Mist Trail (Vernal Fall 97m + Nevada Fall 180m), Yosemite Falls (739m · 11km), Mirror Lake, Olmsted Point, Tenaya Lake (2484m), Tuolumne Meadows, Mariposa Grove (Grizzly Giant 2700 ans)",
     hotelEnc:"n/O85Aq44AmvhFrW:MaR8EonxsOOyu0sxFM7+IoVgA0MkKl5TCacfxReg7ExEt3PWSy1mOgYE6jL9T4KgAEfGEKvMIAjlSX90Pca/KQFAh604GnudsMTdmQqmboSHMUzXwVZ4yww4t9Qb2vE=" },
@@ -449,31 +483,34 @@ const ETAPES = [
   { num:5,  icon:"🏜️", name:"Death Valley",             dayIdx:8,  nuits:1, dates:"Ven 31 juil – Sam 1er août",
     sites:"Dante's View (1669m), Zabriskie Point, Mesquite Flat Dunes (lever de soleil), Badwater Basin (-86m), Artist Drive",
     hotelEnc:"fCs32jEkT1gArkkw:u+do0KQr7DHCMy2PweNvMqqfRwsFuQnbp5suu6hBu4FCXN4Cu545QO0CU8xwKIwoaj4sNAFQMuTK1cQbGkrzKV+GSFhozjOougP6DcZoQcoss7UGWrPxsg==" },
+  { special:true, icon:"🛎️", name:"Conciergerie", dates:"Sam 1er août", desc:"Check out : 1h · Vérification Ménage : 4h à 6h · Check in : à partir de 7h - Mélanie" },
   { num:6,  icon:"🎰", name:"Las Vegas",                dayIdx:9,  nuits:1, dates:"Sam 1 – Dim 2 août",
     sites:"Fremont Street Experience (plafond LED 460m), The Strip by night, fontaines Bellagio, Caesar's Palace",
     hotelEnc:"I6SlQxVN6bFxRwYN:pHV75mLS0Qpwe0SwtPUgTpKlkqMXiVULMqKQAN4vnWL130Iwg9F1uaegNa9ghW+xMrv7YflwNM+01zb0EonA3Fsfhjdi39GZrGzjp2ApeRLaea9BXEW9B29jFVqtqHd3" },
-  { num:7,  icon:"🏜️", name:"Grand Canyon / Williams",  dayIdx:10, nuits:1, dates:"Dim 2 – Lun 3 août",
-    sites:"Mather Point, Rim Trail, Hopi Point (panorama 180°), Hermits Rest, Bright Angel Lodge",
+  { num:7,  icon:"🏜️", name:"Grand Canyon West / Williams", dayIdx:10, nuits:1, dates:"Dim 2 – Lun 3 août",
+    sites:"Grand Canyon West (Hualapai Reservation) : Skywalk, Eagle Point, Native American Village, Guano Point, Hualapai Ranch",
     hotelEnc:"/5a7nGUK/qq95hyG:OLKPuaoTj5c137w1fTxZSvoGPMaT4HJGFI7I4zEW5mhHEvnHldOifXCARE3TLz3gahbTG2ybVwJt612kTF8Nkr4+oZJ5E55MqXgOeYApR2ibdBz9rdy5AI92/3bVTx+u34m9F0FU" },
-  { num:8,  icon:"🌵", name:"Joshua Tree / Palm Springs", dayIdx:11, nuits:2, dates:"Lun 3 – Mer 5 août",
-    sites:"Hidden Valley, Cap Rock, Keys View (1581m), Cholla Cactus Garden, Skull Rock, ciel étoilé · Aerial Tramway (2600m), Palm Canyon Drive, Marilyn Forever, Graffiti Yard",
+  { num:8,  icon:"🌵", name:"Grand Canyon South Rim / Joshua Tree / Palm Springs", dayIdx:11, nuits:2, dates:"Lun 3 – Mer 5 août",
+    sites:"Grand Canyon South Rim : Mather Point, Rim Trail (Hopi Point, Hermits Rest) · Hidden Valley, Cap Rock, Keys View (1581m), Cholla Cactus Garden, Skull Rock · Aerial Tramway (2600m), Palm Canyon Drive, Marilyn Forever, Graffiti Yard",
     hotelEnc:"6QuUJdBjFGjic4wL:fd0teJzIw+mPE1Hhnm0nzXWKVRTj/YnVDoTxlKamkK5rCA+ajrq28AxGDO2qUTqbOCJh8xPiOJ1ENEaorr9PWqTTOoVFTbHt62RwEzb2Z99mnyuLTWndcGs6MP9mVGKD2HiSi0m8" },
   { num:9,  icon:"🎬", name:"Los Angeles (Santa Monica)", dayIdx:13, nuits:3, dates:"Mer 5 – Sam 8 août",
     sites:"Cimetière Westwood, Château Marmont, Venice Beach, Venice Canaux, Abbot Kinney, Santa Monica Pier, Griffith Observatory, Hollywood Sign, Hollyhock House, Walk of Fame, Universal Studios",
     hotelEnc:"cpevapN2SHRNTxBe:vXevvDGWJdxP5O1DhNJ7v1xBpzx53gTFY3nEaRQ0M4Q16MCoLR3/C70JUDvAsNHeyRtkNYH6A6qpvH7r8Oz2d4rqks6AJwE+/cXMQHrPlZXgaG47j6QUWGk8XTd7aA==" },
-  { num:10, icon:"🎬", name:"Los Angeles (Eagle Rock)",  dayIdx:16, nuits:2, dates:"Sam 8 – Lun 9 août",
+  { special:true, icon:"🛎️", name:"Conciergerie", dates:"Sam 8 août", desc:"Check out : 1h · Vérification Ménage : 4h à 6h · Check in : à partir de 7h - Dominique" },
+  { num:10, icon:"🎬", name:"Los Angeles (Eagle Rock)",  dayIdx:16, nuits:1, dates:"Sam 8 – Dim 9 août",
     sites:"Mulholland Drive, Runyon Canyon, Beachwood Canyon, Melrose, Spadena House, Rodeo Drive, Highland Park, Downtown LA, Bradbury Building, Grand Central Market, Malibu Point Dume",
     hotelEnc:"aNpwfWMBk2rWIDgp:w0SVGAFhKZCsFdWNH+wuvThOzamcx+VVj04g6TLnkciYzsuWVuREbC/XlA/rIP6aAIi1AFIsx6mfTrl25wMThmpxBBrKx4zQkGTrk3IGynOdfqmP+bENSN/NWLKW0zluXTZrzEnv18lXDVcR" },
-  { num:11, icon:"🌺", name:"Santa Barbara",            dayIdx:18, nuits:1, dates:"Lun 9 – Mar 10 août",
-    sites:"Mission Santa Barbara (1786), Stearns Wharf, State Street, plage coucher de soleil",
-    hotelEnc:"XN0ugn51itxny/UL:mrJ7rd8RYuV+LKkK0oQVvscRyo8qfGLeMh30TA9pu8chsUZxmgq9a/3z4ihgBll7Dfj2ckJ2ktpNnA0JAFgoJLWU8olqG9HBVBUwaNgtmLSFw///Ehsnc/huo2LKy2I=" },
-  { num:12, icon:"🐘", name:"Cambria",                  dayIdx:19, nuits:1, dates:"Mar 10 – Mer 11 août",
+  { num:11, icon:"🏖️", name:"Port Hueneme / Oxnard",     dayIdx:17, nuits:3, dates:"Dim 9 – Mer 12 août",
+    sites:"Baignade Mandalay Beach · Malibu (El Matador, Point Dume, Malibu Pier, Getty Villa) · Santa Barbara (Mission, Courthouse, State Street, Stearns Wharf)",
+    hotelEnc:"+oQ5xEckd6bYfpxk:+SiUuSSVaHbq0UlTx1qnck8aUuI7q3J/1OxusmqVJMJJjxLNK9zUDaRXAlsZuSxIknHO8wv85fP/uFs9LHTiUoaGVrnfXfKWjO5NhiwKUiTq8Qgwa+y8EJoaktWR3w4YrnMmYxI3HV2Mt/Ih5maPqtXQModD29QuTiX2GGFRbG8=" },
+  { num:12, icon:"🐘", name:"Cambria",                  dayIdx:20, nuits:1, dates:"Mer 12 – Jeu 13 août",
     sites:"Piedras Blancas (éléphants de mer), Hearst Castle (Grand Rooms Tour), Moonstone Beach",
     hotelEnc:"npkYD7ZnEXaqnc0m:k07WICGwKMEt3K4t6PpfCXY29aQ8UrjN/FEarWSebIkoYL7UePydCq2IduPIG4PlxO8AMd2rAwCXDHmCE/vh6aDGcTBqN+lQRIA7Eps0abgjzOn1ahNA" },
-  { num:13, icon:"🐋", name:"Monterey / Carmel",        dayIdx:20, nuits:3, dates:"Mer 11 – Ven 14 août",
-    sites:"Big Sur Hwy 1 : McWay Falls, Partington Cove (tunnel falaise), Bixby Bridge, Point Sur, Garrapata SP · Sortie baleines (3h) · 17-Mile Drive · Mission Ranch Clint Eastwood · Point Lobos · Carmel village · Aquarium Monterey",
-    hotelEnc:"Q6Jc+NRASqFguG/a:+4qaMpBGKzKG7YtCWqiQXNiWepNvPkxPdqYq4deBbqa9xBn0ZtGPsaveJKJRgvlXtsVXh7usRnkqaa0hYKEoBUknIMDwVob1sIaVUzztwX27wLW36aOCoDJBqXTp41Haq90BCvNGTBRtX3SvOJeke52TR+B9E+wkkQ==" },
-  { num:14, icon:"💻", name:"Silicon Valley / SFO",     dayIdx:22, nuits:0, dates:"Ven 14 août (départ)",
+  { num:13, icon:"🐋", name:"Monterey / Carmel (base Santa Cruz)", dayIdx:21, nuits:2, dates:"Jeu 13 – Sam 15 août",
+    sites:"Big Sur Hwy 1 : McWay Falls, Partington Cove (tunnel falaise), Bixby Bridge, Point Sur, Garrapata SP · Point Lobos · Sortie baleines (3h) · Carmel village",
+    hotelEnc:"UtBJe7o+L8F07uvt:Ux5yUdHu4i6npZ8oxkd4rLYHzflf6cfimvzdF1/4HZD3EJMxlXihhedvu1Od9TqIwxUYFgIFG6u40wGHu641J6fWE9FrQE/2VwwriA5xos4pdQvt7Sc84BgthCr6hELZOQiRvYjJA4A=" },
+  { num:14, icon:"💻", name:"Silicon Valley / SFO",     dayIdx:23, nuits:0, dates:"Sam 15 août (départ)",
     sites:"Stanford University, Google Visitor Experience (Gradient Canopy), Meta HQ (photo), Apple Park Visitor Center → SFO · Vol 16h05",
-    hotelEnc:"Qam4NebQ9XNi1Rho:JrZ5slylyukiY6eQnTNIaL+8y/EUBII0/+tOsKHt5Hwy" }
+    hotelEnc:"Qam4NebQ9XNi1Rho:JrZ5slylyukiY6eQnTNIaL+8y/EUBII0/+tOsKHt5Hwy" },
+  { special:true, icon:"🛎️", name:"Conciergerie", dates:"Dim 16 août", desc:"Check out : 1h · Vérification Ménage : 4h à 6h · Check in : à partir de 7h - Julie" }
 ];

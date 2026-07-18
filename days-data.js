@@ -103,7 +103,10 @@ const DAYS = [
       { time:"", type:"alert", label:"⚠️ Alerte", desc:"Imperméable OBLIGATOIRE dès l'approche de Vernal Fall — embruns qui trempent complètement.", dur:"" },
       { time:"12h30", type:"meal", label:"🍽️ Déjeuner", desc:"Pause déjeuner — Yosemite Village — Village Store ou Valley Lodge", dur:"1h" },
       { time:"13h30", type:"walk", label:"🚶 À pied", desc:"Valley Visitor Center + Ansel Adams Gallery.", dur:"45 min" },
-      { time:"14h20", type:"walk", label:"🚶 À pied", desc:"Rives Merced River — vue El Capitan et Half Dome. Balade libre.", dur:"40 min" }
+      { time:"14h20", type:"walk", label:"🚶 À pied", desc:"Rives Merced River — vue El Capitan et Half Dome. Balade libre.", dur:"40 min" },
+      { time:"15h00", type:"car", label:"🚗 Voiture", desc:"Parking Day Use Valley → condo Yosemite West via Hwy 41", dur:"20 min" },
+      { time:"15h20", type:"activity", label:"🏃 Activité", desc:"Retour condo. Repos après la journée (Glacier Point + Mist Trail 4h30).", dur:"" },
+      { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner au condo (provisions) ou Wawona Hotel restaurant (15 min voiture).", dur:"1h" }
     ]
   },
   { num:"J6", date:"Mar 28 juil", title:"Yosemite Falls (matin) + Mirror Lake + balade vallée (après-midi)",
@@ -118,7 +121,8 @@ const DAYS = [
       { time:"15h05", type:"walk", label:"🚶 À pied", desc:"Balade libre : rives Merced River, vue El Capitan. Possibilité vélo de vallée.", dur:"1h" },
       { time:"16h10", type:"car", label:"🚗 Voiture", desc:"Parking Day Use Valley → condo Yosemite West", dur:"20 min" },
       { time:"16h35", type:"activity", label:"🏃 Activité", desc:"Retour condo. Repos. Préparer bagages Kings Canyon.", dur:"" },
-      { time:"17h00", type:"activity", label:"🧺 Lessive", desc:"Lessive au condo (lave-linge sur place) — profitez-en avant la route vers Kings Canyon demain.", dur:"1h30" }
+      { time:"17h00", type:"activity", label:"🧺 Lessive", desc:"Lessive au condo (lave-linge sur place) — profitez-en avant la route vers Kings Canyon demain.", dur:"1h30" },
+      { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner au condo (provisions) ou Wawona Hotel restaurant (15 min voiture).", dur:"1h" }
     ]
   },
   { num:"J7", date:"Mer 29 juil", title:"Olmsted Point + Tenaya Lake + Tuolumne → Mariposa Grove → Fresno → Kings Canyon",
@@ -140,6 +144,7 @@ const DAYS = [
       { time:"18h30", type:"activity", label:"🏃 Activité", desc:"Fresno : plein d'essence + provisions supermarché.", dur:"20 min" },
       { time:"18h50", type:"car", label:"🚗 Voiture", desc:"Fresno → Gena's Sierra Inn (Dunlap, Kings Canyon) via Hwy 180 — 45 km", dur:"40 min" },
       { time:"19h30", type:"activity", label:"🏃 Activité", desc:"Check-in Gena's Sierra Inn & Bella Brooke Cafe — 37692 East Kings Canyon Rd, Dunlap CA 93621 (Booking · ⚠️ petit déjeuner NON inclus)", dur:"" },
+      { time:"20h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Bella Brooke Cafe (sur place à Gena's Sierra Inn).", dur:"1h" },
       { time:"", type:"tip", label:"💡 Conseil", desc:"Zumwalt Meadow Trail (3 km A/R) reporté au lendemain matin pour alléger cette journée de transition. ⚠️ Journée révisée : trajet Tuolumne→Mariposa Grove réellement ~2h20 (et non 1h30) — départ de Tuolumne Meadows à 12h00 à ne pas retarder. Le trajet Fresno → Gena's Sierra Inn (~45 km / 40 min via Hwy 180) permet d'arriver au check-in vers 19h30.", dur:"" },
       { time:"", type:"alert", label:"⚠️ Alerte", desc:"Hébergement Kings Canyon très limité — réservez sur recreation.gov le plus tôt possible.", dur:"" }
     ]
@@ -194,7 +199,8 @@ const DAYS = [
       { time:"19h00", type:"activity", label:"🚌 Uber", desc:"Hôtel Strip → Fremont Street", dur:"15 min" },
       { time:"19h15", type:"walk", label:"🚶 À pied", desc:"Fremont Street Experience : plafond LED 460m, concerts gratuits.", dur:"1h30" },
       { time:"21h00", type:"activity", label:"🚌 Uber", desc:"Fremont → The Strip", dur:"10 min" },
-      { time:"21h15", type:"walk", label:"🚶 À pied", desc:"The Strip by night : fontaines Bellagio, Caesar's Palace, MGM Grand.", dur:"2h" }
+      { time:"21h15", type:"walk", label:"🚶 À pied", desc:"The Strip by night : fontaines Bellagio, Caesar's Palace, MGM Grand.", dur:"2h" },
+      { time:"23h15", type:"meal", label:"🍽️ Dîner", desc:"Dîner tardif sur le Strip — options ouvertes tard (buffet ou restaurant casino).", dur:"1h" }
     ]
   },
   { num:"J11", date:"Dim 2 août", title:"Las Vegas → Grand Canyon West (Hualapai Reservation) → Williams",
@@ -230,10 +236,10 @@ const DAYS = [
       { time:"13h55", type:"transit", label:"🚌 Navette bleue (Village Route)", desc:"Village Route Transfer → Grand Canyon Visitor Center.", dur:"15 min · pass" },
       { time:"14h10", type:"transit", label:"🚌 Navette violette (Tusayan Route)", desc:"Grand Canyon Visitor Center → arrêt IMAX Tusayan (récupération de la voiture). Toutes les 20 min.", dur:"20 min · pass" },
       { time:"14h30", type:"meal", label:"🍽️ Déjeuner", desc:"Déjeuner tardif à Tusayan avant la longue route vers Palm Springs.", dur:"45 min" },
-      { time:"15h15", type:"car", label:"🚗 Voiture", desc:"Tusayan → Palm Springs via Hwy 64 Sud + I-40 Ouest + I-10 Est — 650 km", dur:"6h15" },
-      { time:"21h30", type:"activity", label:"🏃 Activité", desc:"Check-in Caliente Tropics · 411 East Palm Canyon Drive, Palm Springs CA 92262 (Booking · ⚠️ petit déjeuner NON inclus).", dur:"" },
-      { time:"22h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner tardif Palm Springs — options limitées à cette heure, prévoir repas simple ou à emporter.", dur:"" },
-      { time:"", type:"alert", label:"⚠️ Alerte", desc:"Journée très longue (lever 6h, arrivée hôtel ~21h30) : randonnée 5h + 6h15 de route l'après-midi. Prévoir relève au volant si possible, pauses régulières et bonne hydratation. Pas de décalage horaire Arizona → Californie en été.", dur:"" }
+      { time:"15h15", type:"car", label:"🚗 Voiture", desc:"Tusayan → Palm Springs via Hwy 64 Sud + I-40 Ouest + I-10 Est — 650 km", dur:"6h45" },
+      { time:"22h00", type:"activity", label:"🏃 Activité", desc:"Check-in Caliente Tropics · 411 East Palm Canyon Drive, Palm Springs CA 92262 (Booking · ⚠️ petit déjeuner NON inclus).", dur:"" },
+      { time:"22h30", type:"meal", label:"🍽️ Dîner", desc:"Dîner tardif Palm Springs — options limitées à cette heure, prévoir repas simple ou à emporter.", dur:"" },
+      { time:"", type:"alert", label:"⚠️ Alerte", desc:"Journée très longue (lever 6h, arrivée hôtel ~22h00) : randonnée 5h + 6h45 de route l'après-midi (avec pause essence/pause pipi incluse). Prévoir relève au volant si possible, pauses régulières et bonne hydratation. Pas de décalage horaire Arizona → Californie en été.", dur:"" }
     ]
   },
   { num:"J13", date:"Mar 4 août", title:"Joshua Tree (matin) → Palm Springs",
@@ -260,7 +266,8 @@ const DAYS = [
       { time:"18h25", type:"car", label:"🚗 Voiture", desc:"Centre → Graffiti Yard (Art District)", dur:"10 min" },
       { time:"18h40", type:"walk", label:"🚶 À pied", desc:"Graffiti Yard + murales Art District + Public Art Wings.", dur:"30 min" },
       { time:"19h15", type:"car", label:"🚗 Voiture", desc:"Art District → Wash Time Coin Laundry · 1751 N Sunrise Way D1, Palm Springs — ~4 km", dur:"10 min" },
-      { time:"19h25", type:"activity", label:"🧺 Lessive", desc:"Wash Time Coin Laundry · 1751 N Sunrise Way D1. Lessive complète.", dur:"2h" }
+      { time:"19h25", type:"activity", label:"🧺 Lessive", desc:"Wash Time Coin Laundry · 1751 N Sunrise Way D1. Lessive complète.", dur:"2h" },
+      { time:"21h25", type:"meal", label:"🍽️ Dîner", desc:"Dîner à proximité du laundromat ou à l'hôtel Caliente Tropics.", dur:"1h" }
     ]
   },
   { num:"J14", date:"Mer 5 août", title:"Palm Springs → Cimetière Westwood → Château Marmont (photo) → Venice Beach · Venice Canal · Abbot Kinney · Santa Monica",
@@ -279,7 +286,8 @@ const DAYS = [
       { time:"14h20", type:"walk", label:"🚶 À pied", desc:"Venice Canaux (Dell Avenue & Carroll Canal) : maisons colorées, ponts en bois. 10 min à pied du parking. Impossible de se garer dans ce quartier résidentiel.", dur:"35 min" },
       { time:"14h55", type:"activity", label:"🛍️ Activité", desc:"Abbot Kinney Boulevard : boutiques indépendantes, galeries, concept stores. 15 min à pied du parking.", dur:"1h" },
       { time:"16h00", type:"bike", label:"🚲 Vélo", desc:"Venice Beach → Santa Monica Pier via piste cyclable longeant l'océan (5 km). Location vélo sur le Boardwalk.", dur:"20 min · $15–20/h" },
-      { time:"18h00", type:"car", label:"🚗 Voiture", desc:"Récupérer voiture → hôtel Santa Monica", dur:"20 min" }
+      { time:"18h00", type:"car", label:"🚗 Voiture", desc:"Récupérer voiture → hôtel Santa Monica", dur:"20 min" },
+      { time:"19h30", type:"meal", label:"🍽️ Dîner", desc:"Dîner Santa Monica — Third Street Promenade ou Ocean Avenue.", dur:"1h" }
     ]
   },
   { num:"J15", date:"Jeu 6 août", title:"METRO : Griffith Observatory · Hollywood Sign · Hollyhock House · Wilshire Art Déco · Walk of Fame",
@@ -298,7 +306,8 @@ const DAYS = [
       { time:"15h00", type:"walk", label:"🚶 À pied", desc:"Wilshire Blvd Art Déco — Miracle Mile : Wiltern Theatre · Bullocks Wilshire · Academy Museum · La Brea Tar Pits · Deco Building (5209 Wilshire). Balade entre les 3 stations D Line.", dur:"1h30" },
       { time:"16h45", type:"transit", label:"🚇 Metro B Line", desc:"Wilshire/La Cienega → D Line → Wilshire/Western → B Line direction North Hollywood → Hollywood/Highland", dur:"$1.75" },
       { time:"17h10", type:"walk", label:"🚶 À pied", desc:"Walk of Fame · TCL Chinese Theatre · Dolby Theatre. Station Hollywood/Highland (B Line).", dur:"1h" },
-      { time:"18h15", type:"transit", label:"🚇 Metro B Line", desc:"Hollywood/Highland → 7th/Metro Center → Big Blue Bus → hôtel Santa Monica", dur:"~$3" }
+      { time:"18h15", type:"transit", label:"🚇 Metro B Line", desc:"Hollywood/Highland → 7th/Metro Center → Big Blue Bus → hôtel Santa Monica", dur:"1h10 · ~$3" },
+      { time:"19h30", type:"meal", label:"🍽️ Dîner", desc:"Dîner Santa Monica — Third Street Promenade ou Ocean Avenue.", dur:"1h" }
     ]
   },
   { num:"J16", date:"Ven 7 août", title:"LA : Universal Studios (journée entière)",
@@ -314,7 +323,10 @@ const DAYS = [
   },
   { num:"J17", date:"Sam 8 août", title:"VOITURE : Mulholland Drive · Runyon Canyon · Beachwood Canyon · Melrose · Spadena · Rodeo Drive",
     activities:[
-      { time:"09h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel The Hills Inn Eagle Rock 09h00] — Hôtel Mount Washington → Mulholland Drive via I-110 N + US-101 N + Cahuenga Blvd — 25 min", dur:"25 min" },
+      { time:"07h30", type:"activity", label:"🏃 Activité", desc:"Petit-déjeuner hôtel The Sea Atelier. Bagages bouclés, check-out.", dur:"" },
+      { time:"08h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel The Sea Atelier (Santa Monica) 08h00] — Santa Monica → The Hills Inn Eagle Rock (Mount Washington) via I-10 Est + I-110 Nord — 30 km", dur:"35 min" },
+      { time:"08h35", type:"activity", label:"🏃 Activité", desc:"Check-in The Hills Inn Eagle Rock · 2300 Colorado Blvd, Los Angeles CA 90041 (Airbnb · petit déjeuner inclus). Dépose des bagages, repart aussitôt pour Mulholland Drive.", dur:"" },
+      { time:"09h00", type:"car", label:"🚗 Voiture", desc:"Hôtel Mount Washington → Mulholland Drive via I-110 N + US-101 N + Cahuenga Blvd — 25 min", dur:"25 min" },
       { time:"09h30", type:"parking", label:"🅿 Parking", desc:"Hollywood Bowl Overlook · 7036 Mulholland Drive · parking dédié gratuit · vue Hollywood Sign + Downtown LA", dur:"Gratuit" },
       { time:"09h35", type:"car", label:"🚗 Voiture", desc:"Mulholland Drive — Hollywood Bowl Overlook + Nancy Hoover Pohl Overlook (8401 Mulholland Dr, 40 places, gratuit) · arrêts 20 min chacun · vue San Fernando Valley", dur:"45 min" },
       { time:"", type:"info", label:"🆚 Challenge", desc:"Route panoramique en hauteur — voiture absolument obligatoire. Aucune desserte Metro ou bus.", dur:"" },
@@ -386,7 +398,7 @@ const DAYS = [
       { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Port Hueneme / Oxnard.", dur:"1h" }
     ]
   },
-  { num:"J21", date:"Mer 12 août", title:"Port Hueneme → Piedras Blancas → Hearst Castle → Cambria",
+  { num:"J21", date:"Mer 12 août", title:"Port Hueneme → Piedras Blancas → Hearst Castle → Morro Bay",
     activities:[
       { time:"08h15", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Hotel Oxnard (Port Hueneme) 08h15] — Port Hueneme (Oxnard) → Piedras Blancas (San Simeon) via US-101 + CA-1 — 290 km", dur:"3h15" },
       { time:"11h30", type:"parking", label:"🅿 Parking", desc:"Piedras Blancas Rookery Lot · CA-1, San Simeon CA 93452", dur:"Gratuit" },
@@ -394,14 +406,14 @@ const DAYS = [
       { time:"13h50", type:"transit", label:"🚌 Navette obligatoire", desc:"Visitor center → château (accès voiture impossible). Navette incluse.", dur:"5 min" },
       { time:"14h00", type:"walk", label:"🚶 À pied", desc:"Hearst Castle — Grand Rooms Tour 1h30 : piscine Neptune, art européen, collections pharaoniques.", dur:"1h30" },
       { time:"", type:"alert", label:"⚠️ Alerte", desc:"Réservation obligatoire sur hearstcastle.org — créneaux partent vite en été.", dur:"" },
-      { time:"15h45", type:"car", label:"🚗 Voiture", desc:"Hearst Castle → Cambria — 10 min", dur:"10 min" },
-      { time:"16h00", type:"activity", label:"🏃 Activité", desc:"Check-in Chambre Cambria · 2618 Main Street, Cambria CA 93428 (Airbnb · petit déjeuner inclus).", dur:"" },
-      { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Cambria en ville.", dur:"1h" }
+      { time:"15h45", type:"car", label:"🚗 Voiture", desc:"Hearst Castle → Morro Bay via CA-1 Sud — 25 min", dur:"25 min" },
+      { time:"16h15", type:"activity", label:"🏃 Activité", desc:"Check-in The Sea Air Inn & Suites · 845 Morro Avenue, Morro Bay CA 93442 (⚠️ hôtel de remplacement — l'hébergement Cambria initial a été annulé).", dur:"" },
+      { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Morro Bay en ville — vue sur Morro Rock.", dur:"1h" }
     ]
   },
-  { num:"J22", date:"Jeu 13 août", title:"Cambria → Big Sur (McWay Falls · Partington Cove · Bixby Bridge) → Monterey",
+  { num:"J22", date:"Jeu 13 août", title:"Morro Bay → Big Sur (McWay Falls · Partington Cove · Bixby Bridge) → Monterey",
     activities:[
-      { time:"09h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Cambria 09h00] — Cambria → McWay Falls (Julia Pfeiffer Burns SP) via Hwy 1 — 1h", dur:"1h" },
+      { time:"08h45", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel The Sea Air Inn & Suites (Morro Bay) 08h45] — Morro Bay → McWay Falls (Julia Pfeiffer Burns SP) via Hwy 1 — 1h15", dur:"1h15" },
       { time:"10h00", type:"parking", label:"🅿 Parking", desc:"McWay Falls Lot · Hwy 1, Julia Pfeiffer Burns SP", dur:"Gratuit (pass)" },
       { time:"10h05", type:"walk", label:"🚶 À pied", desc:"McWay Falls : cascade tombant directement sur la plage. Sentier 300m A/R.", dur:"20 min" },
       { time:"10h30", type:"car", label:"🚗 Voiture", desc:"McWay Falls → Partington Cove — 15 min", dur:"15 min" },
@@ -413,8 +425,10 @@ const DAYS = [
       { time:"14h50", type:"car", label:"🚗 Voiture", desc:"Point Sur → Garrapata SP via arrêts bas-côtés : Hurricane Point, Soberanes Point (5 min chacun)", dur:"25 min" },
       { time:"15h15", type:"parking", label:"🅿 Parking", desc:"Garrapata State Park Lot · Hwy 1", dur:"Gratuit" },
       { time:"15h20", type:"walk", label:"🚶 À pied", desc:"Garrapata State Park : sentier côtier 2–3 km · falaises spectaculaires sur le Pacifique.", dur:"1h" },
-      { time:"16h25", type:"car", label:"🚗 Voiture", desc:"Garrapata → hôtel Monterey — 30 min", dur:"30 min" },
-      { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Cannery Row — Monterey.", dur:"1h" }
+      { time:"16h25", type:"car", label:"🚗 Voiture", desc:"Garrapata → Cannery Row (Monterey) — 30 min", dur:"30 min" },
+      { time:"19h00", type:"meal", label:"🍽️ Dîner", desc:"Dîner Cannery Row — Monterey.", dur:"1h" },
+      { time:"20h00", type:"car", label:"🚗 Voiture", desc:"Monterey → Santa Cruz via Hwy 1 Nord — 70 km", dur:"1h05" },
+      { time:"21h05", type:"activity", label:"🏃 Activité", desc:"Check-in Aqua Breeze Inn · Santa Cruz (Airbnb/Booking).", dur:"" }
     ]
   },
   { num:"J23", date:"Ven 14 août", title:"Point Lobos (matin) + Sortie Baleines 13h30 · Carmel village",
@@ -503,9 +517,9 @@ const ETAPES = [
   { num:11, icon:"🏖️", name:"Port Hueneme / Oxnard",     dayIdx:17, nuits:3, dates:"Dim 9 – Mer 12 août",
     sites:"Baignade Mandalay Beach · Malibu (El Matador, Point Dume, Malibu Pier, Getty Villa) · Santa Barbara (Mission, Courthouse, State Street, Stearns Wharf)",
     hotelEnc:"+oQ5xEckd6bYfpxk:+SiUuSSVaHbq0UlTx1qnck8aUuI7q3J/1OxusmqVJMJJjxLNK9zUDaRXAlsZuSxIknHO8wv85fP/uFs9LHTiUoaGVrnfXfKWjO5NhiwKUiTq8Qgwa+y8EJoaktWR3w4YrnMmYxI3HV2Mt/Ih5maPqtXQModD29QuTiX2GGFRbG8=" },
-  { num:12, icon:"🐘", name:"Cambria",                  dayIdx:20, nuits:1, dates:"Mer 12 – Jeu 13 août",
-    sites:"Piedras Blancas (éléphants de mer), Hearst Castle (Grand Rooms Tour), Moonstone Beach",
-    hotelEnc:"npkYD7ZnEXaqnc0m:k07WICGwKMEt3K4t6PpfCXY29aQ8UrjN/FEarWSebIkoYL7UePydCq2IduPIG4PlxO8AMd2rAwCXDHmCE/vh6aDGcTBqN+lQRIA7Eps0abgjzOn1ahNA" },
+  { num:12, icon:"🐘", name:"Morro Bay",                 dayIdx:20, nuits:1, dates:"Mer 12 – Jeu 13 août",
+    sites:"Piedras Blancas (éléphants de mer), Hearst Castle (Grand Rooms Tour), Morro Rock",
+    hotelEnc:"QlIBXNaMp8mrWg6j:oGga0b2yJ5fbNKaOEOxSYK7+DQD8f/yiJHRfWLxA9K8G" },
   { num:13, icon:"🐋", name:"Monterey / Carmel (base Santa Cruz)", dayIdx:21, nuits:2, dates:"Jeu 13 – Sam 15 août",
     sites:"Big Sur Hwy 1 : McWay Falls, Partington Cove (tunnel falaise), Bixby Bridge, Point Sur, Garrapata SP · Point Lobos · Sortie baleines (3h) · Carmel village",
     hotelEnc:"UtBJe7o+L8F07uvt:Ux5yUdHu4i6npZ8oxkd4rLYHzflf6cfimvzdF1/4HZD3EJMxlXihhedvu1Od9TqIwxUYFgIFG6u40wGHu641J6fWE9FrQE/2VwwriA5xos4pdQvt7Sc84BgthCr6hELZOQiRvYjJA4A=" },

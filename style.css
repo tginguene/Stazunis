@@ -283,6 +283,8 @@ table.recap tbody td:nth-child(6)  { font-size: 0.82rem; color: var(--muted); }
 .day-hero-num   { font-size: 0.82rem; font-weight: 700; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.1em; }
 .day-hero-date  { font-size: 1rem; font-weight: 600; margin-top: 4px; opacity: 0.9; }
 .day-hero-title { font-size: clamp(1.1rem, 3vw, 1.7rem); font-weight: 800; margin-top: 8px; }
+.day-hero-sun   { display: flex; gap: 16px; margin-top: 10px; font-size: 0.85rem; opacity: 0.9; }
+.day-hero-sun span { display: inline-flex; align-items: center; gap: 4px; }
 
 /* ----- Navigation jours ----- */
 .day-nav {

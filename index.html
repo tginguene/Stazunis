@@ -215,10 +215,17 @@ function renderDayPage(idx) {
           '</div>';
       }).join('') + '</div>';
   }
+  var sunHtml = (day.sunrise || day.sunset)
+    ? '<div class="day-hero-sun">' +
+      (day.sunrise ? '<span>🌅 ' + day.sunrise + '</span>' : '') +
+      (day.sunset ? '<span>🌇 ' + day.sunset + '</span>' : '') +
+      '</div>'
+    : '';
   return '<div class="day-hero">' +
     '<div class="day-hero-num">' + day.num + '</div>' +
     '<div class="day-hero-date">' + day.date + '</div>' +
     '<div class="day-hero-title">' + day.title + '</div>' +
+    sunHtml +
     '</div>' +
     '<main>' + nav +
     highlightsHtml +

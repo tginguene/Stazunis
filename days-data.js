@@ -6,8 +6,9 @@
 
 const DAYS = [
   { num:"J1", date:"Jeu 23 juil", title:"San Francisco (nuit 1/3)",
+    sunrise:"06h06", sunset:"20h27",
     activities:[
-      { time:"13h50", type:"activity", label:"🏃 Activité", desc:"🏨 [Jour d'arrivée — pas de départ d'hôtel ce jour] — Atterrissage SFO. Bagages + immigration.", dur:"~1h" },
+      { time:"13h50", type:"activity", label:"🏃 Activité", desc:"🏨 [Jour d'arrivée] — Atterrissage SFO. Bagages + immigration.", dur:"~1h" },
       { time:"15h00", type:"car", label:"🚗 Voiture", desc:"SFO → Royal Pacific · 661 Broadway, San Francisco CA 94133 (Airbnb · petit déjeuner inclus)", dur:"45 min" },
       { time:"", type:"tip", label:"💡 Conseil", desc:"Voiture garée au parking hôtel — n'en bouge plus jusqu'au Jour 4 après-midi.", dur:"" },
       { time:"16h00", type:"activity", label:"🏃 Activité", desc:"Check-in hôtel. Repos — décalage 9h Paris → SF.", dur:"" },
@@ -21,6 +22,7 @@ const DAYS = [
     ]
   },
   { num:"J2", date:"Ven 24 juil", title:"Vélo Golden Gate + Sausalito (ferry) · Quartiers SF",
+    sunrise:"06h07", sunset:"20h26",
     activities:[
       { time:"08h45", type:"bike", label:"🚲 Location vélo", desc:"🏨 [Départ hôtel Royal Pacific ~08h20, ~20-25 min à pied] — Unlimited Biking, 757 Beach Street (près de Ghirardelli Square) — casque + antivol + billet ferry inclus. Vélo électrique recommandé (montées sportives). Réservez en ligne à l'avance.", dur:"~$35/pers" },
       { time:"09h00", type:"bike", label:"🚲 Vélo", desc:"Sentiers du Presidio à vélo : forêt d'eucalyptus, vues sur la baie.", dur:"25 min" },
@@ -50,6 +52,7 @@ const DAYS = [
     ]
   },
   { num:"J3", date:"Sam 25 juil", title:"Battery Spencer · Twin Peaks · Coit Tower · SoMa · Ferry Building",
+    sunrise:"06h08", sunset:"20h26",
     activities:[
       { time:"09h00", type:"activity", label:"🏃 Activité", desc:"Départ hôtel en voiture — seule demi-journée en voiture à SF.", dur:"" },
       { time:"09h00", type:"car", label:"🚗 Voiture", desc:"Hôtel → Battery Spencer (traversée Golden Gate Bridge, côté Marin)", dur:"20 min" },
@@ -72,6 +75,7 @@ const DAYS = [
     ]
   },
   { num:"J4", date:"Dim 26 juil", title:"Haight · Castro · Columbia Gold Rush → Yosemite West",
+    sunrise:"06h09", sunset:"20h13",
     activities:[
       { time:"09h00", type:"activity", label:"🏃 Activité", desc:"Petit-déjeuner hôtel. Bagages bouclés et prêts — check-out avant de partir visiter.", dur:"" },
       { time:"09h30", type:"transit", label:"🚌 Muni", desc:"🏨 [Départ hôtel Royal Pacific ~09h20] — Hôtel → Haight-Ashbury", dur:"20 min" },
@@ -92,6 +96,7 @@ const DAYS = [
     ]
   },
   { num:"J5", date:"Lun 27 juil", title:"Glacier Point (matin) + Mist Trail Vernal & Nevada Fall (après-midi)",
+    sunrise:"05h58", sunset:"20h13",
     activities:[
       { time:"07h10", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Condo Yosemite West 07h10] — Condo Yosemite West → Glacier Point via Glacier Point Road (juste à côté du condo !) — ⚠️ Départ tôt volontaire : pour le lever de soleil sur Half Dome à Glacier Point ET pour trouver une place au parking, complet dès 9h30 en été.", dur:"10 min" },
       { time:"07h20", type:"parking", label:"🅿 Parking", desc:"Glacier Point Lot — arrivez tôt (complet dès 9h30 en été).", dur:"Gratuit (pass)" },
@@ -110,6 +115,7 @@ const DAYS = [
     ]
   },
   { num:"J6", date:"Mar 28 juil", title:"Yosemite Falls (matin) + Mirror Lake + balade vallée (après-midi)",
+    sunrise:"05h59", sunset:"20h12",
     activities:[
       { time:"07h00", type:"activity", label:"🏃 Activité", desc:"Lever 7h00. Petit-déjeuner au condo. Pique-nique + 2L eau/pers. — ⚠️ Lever tôt volontaire : le Yosemite Falls Trail (11 km, +650m, 3h30) est exposé au soleil sans ombre — mieux vaut le faire tôt, avant la chaleur et la foule.", dur:"" },
       { time:"07h30", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Condo Yosemite West 07h30] — Condo Yosemite West → parking Day Use Valley", dur:"20 min" },
@@ -126,6 +132,7 @@ const DAYS = [
     ]
   },
   { num:"J7", date:"Mer 29 juil", title:"Olmsted Point + Tenaya Lake + Tuolumne → Mariposa Grove → Fresno → Kings Canyon",
+    sunrise:"06h01", sunset:"20h07",
     activities:[
       { time:"06h30", type:"alert", label:"⚠️ Alerte", desc:"LEVER 6h30 — grande journée de transition vers Kings Canyon. Départ tôt indispensable.", dur:"" },
       { time:"06h30", type:"activity", label:"🏃 Activité", desc:"Petit-déjeuner. Pique-nique + eau. Check-out condo Yosemite West. Bagages en voiture.", dur:"" },
@@ -150,6 +157,7 @@ const DAYS = [
     ]
   },
   { num:"J8", date:"Jeu 30 juil", title:"Zumwalt Meadow Trail + Sequoia NP → Three Rivers",
+    sunrise:"05h59", sunset:"20h05",
     activities:[
       { time:"07h30", type:"activity", label:"🏃 Activité", desc:"Petit-déjeuner avec les provisions achetées à Fresno la veille (petit déjeuner NON inclus à Gena's Sierra Inn). Pique-nique + eau.", dur:"" },
       { time:"08h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Gena's Sierra Inn 08h00] — Lodge → Zumwalt Meadow (Cedar Grove, Kings Canyon)", dur:"10 min" },
@@ -171,6 +179,7 @@ const DAYS = [
     ]
   },
   { num:"J9", date:"Ven 31 juil", title:"Three Rivers → Death Valley",
+    sunrise:"06h02", sunset:"19h55",
     activities:[
       { time:"07h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Lemon Cove avancé à 07h00, au lieu de 09h00] — Three Rivers → Furnace Creek (Death Valley) via Hwy 65 + Hwy 178 — 280 km (départ avancé pour arriver avant le pic de chaleur)", dur:"4h30" },
       { time:"11h30", type:"activity", label:"🏃 Activité", desc:"Arrivée Furnace Creek. Check-in The Ranch At Death Valley · Highway 190, Death Valley CA 92328. REPOS OBLIGATOIRE — ne pas sortir (jusqu'à 50°C). Piscine de l'hôtel uniquement.", dur:"" },
@@ -185,6 +194,7 @@ const DAYS = [
     ]
   },
   { num:"J10", date:"Sam 1er août", title:"Death Valley : dunes, Badwater, Artist Drive → Las Vegas",
+    sunrise:"05h55", sunset:"19h47",
     activities:[
       { time:"05h30", type:"alert", label:"⚠️ Alerte", desc:"LEVER 5h30 — fenêtre matinale avant la chaleur.", dur:"" },
       { time:"05h45", type:"walk", label:"🚶 À pied", desc:"🏨 [Sortie hôtel The Ranch At Death Valley dès 05h45 pour les dunes — check-out définitif à 09h30] — Mesquite Flat Dunes au lever du soleil. Lumière rasante dorée sur les dunes.", dur:"45 min" },
@@ -204,6 +214,7 @@ const DAYS = [
     ]
   },
   { num:"J11", date:"Dim 2 août", title:"Las Vegas → Grand Canyon West (Hualapai Reservation) → Williams",
+    sunrise:"05h49", sunset:"19h32",
     activities:[
       { time:"09h00", type:"activity", label:"🏃 Activité", desc:"🏨 [Départ hôtel Ellis Island (Las Vegas) 09h00] — Check-out hôtel Las Vegas. Bagages en voiture.", dur:"" },
       { time:"09h00", type:"car", label:"🚗 Voiture", desc:"Las Vegas → Grand Canyon West Main Terminal (Hualapai Reservation) via US-93 Sud + Pierce Ferry Rd + Diamond Bar Rd — 200 km", dur:"2h30" },
@@ -224,6 +235,7 @@ const DAYS = [
     ]
   },
   { num:"J12", date:"Lun 3 août", title:"Grand Canyon South Rim (Rim Trail 5h) → Palm Springs",
+    sunrise:"05h38", sunset:"19h46",
     img: ["images/GrandCanyon.png", "images/GrandCanyonBus.png"],
     activities:[
       { time:"06h00", type:"activity", label:"🏃 Activité", desc:"Lever tôt — petit-déjeuner Americas Best Value Inn (inclus). Bagages en voiture, check-out.", dur:"" },
@@ -243,6 +255,7 @@ const DAYS = [
     ]
   },
   { num:"J13", date:"Mar 4 août", title:"Joshua Tree (matin) → Palm Springs",
+    sunrise:"05h59", sunset:"19h45",
     activities:[
       { time:"07h00", type:"alert", label:"⚠️ Alerte", desc:"LEVER 7h00 — randonnées Joshua Tree uniquement avant 11h (40°C ensuite). Eau + chapeau + SPF50.", dur:"" },
       { time:"07h15", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Caliente Tropics 07h15] — Hôtel → West Entrance Joshua Tree National Park via Park Blvd", dur:"10 min" },
@@ -271,6 +284,7 @@ const DAYS = [
     ]
   },
   { num:"J14", date:"Mer 5 août", title:"Palm Springs → Cimetière Westwood → Château Marmont (photo) → Venice Beach · Venice Canal · Abbot Kinney · Santa Monica",
+    sunrise:"06h02", sunset:"19h52",
     activities:[
       { time:"09h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Caliente Tropics (Palm Springs) 09h00] — Palm Springs → Los Angeles via I-10 Ouest — 175 km", dur:"2h" },
       { time:"", type:"tip", label:"💡 Conseil", desc:"Sortie Bundy Dr sur I-10 pour rejoindre Wilshire Blvd direction Westwood — Cimetière Westwood est directement sur le trajet depuis l'autoroute vers Venice.", dur:"" },
@@ -291,6 +305,7 @@ const DAYS = [
     ]
   },
   { num:"J15", date:"Jeu 6 août", title:"METRO : Griffith Observatory · Hollywood Sign · Hollyhock House · Wilshire Art Déco · Walk of Fame",
+    sunrise:"06h10", sunset:"19h52",
     activities:[
       { time:"", type:"tip", label:"💡 Conseil", desc:"Journée 100% Metro + DASH. Voiture à l'hôtel toute la journée. TAP Card indispensable. Budget ~$10/pers.", dur:"" },
       { time:"08h30", type:"transit", label:"🚌 Big Blue Bus", desc:"🏨 [Départ hôtel The Sea Atelier 08h30] — Hôtel Santa Monica → 7th/Metro Center", dur:"45 min · $1.25" },
@@ -311,6 +326,7 @@ const DAYS = [
     ]
   },
   { num:"J16", date:"Ven 7 août", title:"LA : Universal Studios (journée entière)",
+    sunrise:"06h11", sunset:"19h51",
     activities:[
       { time:"08h30", type:"activity", label:"🏃 Activité", desc:"Départ hôtel The Sea Atelier. Voiture garée à l'hôtel depuis J14 — reprise ce matin pour Universal Studios.", dur:"" },
       { time:"09h00", type:"car", label:"🚗 Voiture", desc:"Hôtel The Sea Atelier (Santa Monica) → Universal Studios via I-10 E + US-101 N — 35 km", dur:"30 min" },
@@ -322,6 +338,7 @@ const DAYS = [
     ]
   },
   { num:"J17", date:"Sam 8 août", title:"VOITURE : Mulholland Drive · Runyon Canyon · Beachwood Canyon · Melrose · Spadena · Rodeo Drive",
+    sunrise:"06h11", sunset:"19h49",
     activities:[
       { time:"07h30", type:"activity", label:"🏃 Activité", desc:"Petit-déjeuner hôtel The Sea Atelier. Bagages bouclés, check-out.", dur:"" },
       { time:"08h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel The Sea Atelier (Santa Monica) 08h00] — Santa Monica → The Hills Inn Eagle Rock (Mount Washington) via I-10 Est + I-110 Nord — 30 km", dur:"35 min" },
@@ -341,6 +358,7 @@ const DAYS = [
     ]
   },
   { num:"J18", date:"Dim 9 août", title:"METRO : Highland Park · Downtown LA → Port Hueneme (Oxnard)",
+    sunrise:"06h11", sunset:"19h52",
     activities:[
       { time:"09h20", type:"info", label:"🏨 Hôtel", desc:"🏨 [Départ hôtel The Hills Inn Eagle Rock 09h20] — Hôtel Mount Washington — départ à pied vers la station A Line Southwest Museum (10 min, avant le Metro de 09h30).", dur:"" },
       { time:"09h30", type:"transit", label:"🚇 Metro A Line", desc:"Southwest Museum → Highland Park (Ave 57) · 1 station · 3 min", dur:"$1.75" },
@@ -363,6 +381,7 @@ const DAYS = [
     ]
   },
   { num:"J19", date:"Lun 10 août", title:"Malibu : El Matador (2h plage) · Point Dume · Malibu Pier & Lagoon (aller-retour Port Hueneme)",
+    sunrise:"06h15", sunset:"19h51",
     activities:[
       { time:"09h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Hotel Oxnard (Port Hueneme) 09h00] — Port Hueneme (Oxnard) → El Matador State Beach (Malibu) via PCH/CA-1 — 50 km", dur:"50 min" },
       { time:"09h50", type:"parking", label:"🅿 Parking", desc:"El Matador State Beach Lot · 32350 Pacific Coast Hwy, Malibu", dur:"$12" },
@@ -381,6 +400,7 @@ const DAYS = [
     ]
   },
   { num:"J20", date:"Mar 11 août", title:"Santa Barbara : Mission · Courthouse · State Street · Stearns Wharf (aller-retour Port Hueneme)",
+    sunrise:"06h16", sunset:"19h50",
     activities:[
       { time:"09h00", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Hotel Oxnard (Port Hueneme) 09h00] — Port Hueneme (Oxnard) → Santa Barbara via US-101 Nord — 90 km", dur:"1h" },
       { time:"10h00", type:"parking", label:"🅿 Parking", desc:"Mission Santa Barbara — parking Laguna Street", dur:"Gratuit" },
@@ -399,6 +419,7 @@ const DAYS = [
     ]
   },
   { num:"J21", date:"Mer 12 août", title:"Port Hueneme → Piedras Blancas → Hearst Castle → Morro Bay",
+    sunrise:"06h17", sunset:"19h57",
     activities:[
       { time:"08h15", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Hotel Oxnard (Port Hueneme) 08h15] — Port Hueneme (Oxnard) → Piedras Blancas (San Simeon) via US-101 + CA-1 — 290 km", dur:"3h15" },
       { time:"11h30", type:"parking", label:"🅿 Parking", desc:"Piedras Blancas Rookery Lot · CA-1, San Simeon CA 93452", dur:"Gratuit" },
@@ -412,6 +433,7 @@ const DAYS = [
     ]
   },
   { num:"J22", date:"Jeu 13 août", title:"Morro Bay → Big Sur (McWay Falls · Partington Cove · Bixby Bridge) → Monterey",
+    sunrise:"06h22", sunset:"20h04",
     activities:[
       { time:"08h45", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel The Sea Air Inn & Suites (Morro Bay) 08h45] — Morro Bay → McWay Falls (Julia Pfeiffer Burns SP) via Hwy 1 — 1h15", dur:"1h15" },
       { time:"10h00", type:"parking", label:"🅿 Parking", desc:"McWay Falls Lot · Hwy 1, Julia Pfeiffer Burns SP", dur:"Gratuit (pass)" },
@@ -432,6 +454,7 @@ const DAYS = [
     ]
   },
   { num:"J23", date:"Ven 14 août", title:"Point Lobos (matin) + Sortie Baleines 13h30 · Carmel village",
+    sunrise:"06h25", sunset:"20h02",
     activities:[
       { time:"07h30", type:"car", label:"🚗 Voiture", desc:"🏨 [Départ hôtel Aqua Breeze Inn (Santa Cruz) 07h30] — Santa Cruz → Point Lobos State Natural Reserve via Hwy 1 Sud — 80 km", dur:"1h15" },
       { time:"08h45", type:"parking", label:"🅿 Parking", desc:"Point Lobos Entrance Lot · 62 CA-1, Carmel-by-the-Sea CA 93923", dur:"$10" },
@@ -450,6 +473,7 @@ const DAYS = [
     ]
   },
   { num:"J24", date:"Sam 15 août", title:"Stanford · Google · Meta (photo) · Apple Park → SFO · Vol 16h05",
+    sunrise:"06h26", sunset:"20h04",
     activities:[
       { time:"08h30", type:"activity", label:"🏃 Activité", desc:"🏨 [Départ hôtel Aqua Breeze Inn (Santa Cruz) 08h30] — Check-out hôtel Santa Cruz. Bagages en voiture. Départ 8h30 au plus tard.", dur:"" },
       { time:"08h30", type:"car", label:"🚗 Voiture", desc:"Santa Cruz → Stanford University (Palo Alto) via Hwy 17 N + I-280 N — 65 km", dur:"1h" },
